@@ -10,7 +10,6 @@ ManageEngine ServiceDesk Plus es una solución de gestión de servicios de TI (I
 
 Para instalar y construir la imagen Docker de ServiceDesk, sigue estos pasos:
 
-
 1. Clona este repositorio en tu máquina local:
     ```sh
     git clone <URL_DEL_REPOSITORIO>
