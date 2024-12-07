@@ -1,0 +1,68 @@
+#!/usr/bin/expect
+set timeout -1
+
+# Inicia el instalador
+spawn ./ManageEngine_ServiceDesk_Plus_64bit.bin -i console
+
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "DO YOU ACCEPT THE TERMS OF THIS LICENSE AGREEMENT? (Y/N):"
+send -- "Y\r"
+
+# => => # Choose Service Desk Plus Edition ..                                                                                                           
+# => => #   ->1- Enterprise Edition                                                                                                                     
+# => => #     2- Standard Edition                                                                                                                       
+# => => #     3- Professional Edition                                                                                                                   
+# => => # ENTER A COMMA-SEPARATED LIST OF NUMBERS REPRESENTING THE DESIRED CHOICES, OR                                                                  
+expect "PRESS <ENTER> TO ACCEPT THE DEFAULT:"
+send -- "\r"
+
+ expect "Do you want to register for technical support?(Y/N) (Default: Y):"
+ send -- "N\r"
+
+# => => # Choose Install Folder                                                                      
+# => => # ---------------------                                                                      
+# => => # Where would you like to install?                                                           
+# => => #   Default Install Folder: /home/servicedesk/ManageEngine/ServiceDesk                       
+# => => # "ENTER AN ABSOLUTE PATH, OR PRESS <ENTER> TO ACCEPT THE DEFAULT :"
+expect ":"
+send -- "\r"
+expect "Enter WebServer Port (Default: 8080):"
+send -- "8443\r"
+
+# => => # POSTGRESQL(Default)                                                                        
+# => => # NOTE: Other databases like MSSQL can be configured after installing the                    
+# => => # application by executing the <Installation                                                 
+# => => # Folder>/ServiceDesk/bin/changeDBServer.sh file.                                            
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+
+expect "PRESS <ENTER> TO CONTINUE:"
+send -- "\r"
+expect "PRESS <ENTER> TO INSTALL:"
+send -- "\r"
+expect "PRESS <ENTER> TO EXIT THE INSTALLER:"
+send -- "\r"
+
+# Espera al final del proceso
+expect eof
